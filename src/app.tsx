@@ -2,7 +2,7 @@ import { Select } from "@mantine/core"
 import { useState } from "react"
 
 export function App() {
-  const [value, setValue] = useState<string>("")
+  const [value, setValue] = useState<string | null>(null)
 
   return (
     <main
@@ -40,7 +40,7 @@ export function App() {
         }}
         // Even without this, it still does not work
         onClear={() => {
-          setValue("")
+          setValue(null)
         }}
         clearable
       />
